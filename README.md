@@ -31,4 +31,18 @@ https://ehwiki.org/wiki/Technical_Issues#Ports
 	#Run it
 	sudo docker run -d --name h_at_h -p YOUR_PORT:YOUR_PORT -v h_at_h_data:/hath/data -v /DOWNLOAD_DIR:/hath/download -e HatH_KEY=YOUR_CLIENT_KEY btdwv/hentaiathome
 
+## Update:
+	#Stop
+	sudo docker stop h_at_h
 
+ 	#Delete
+	sudo docker rm h_at_h
+
+ 	#Delete old image
+	sudo docker rmi btdwv/hentaiathome
+
+ 	#Pull new image
+	sudo docker pull btdwv/hentaiathome
+
+ 	#Run it
+	sudo docker run -d --name h_at_h -p YOUR_PORT:YOUR_PORT -v h_at_h_data:/hath/data -v /DOWNLOAD_DIR:/hath/download btdwv/hentaiathome
